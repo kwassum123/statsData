@@ -187,11 +187,18 @@ report("#A10",answer)
 <h3>Write a function that takes the classroom data and returns an array of objects.  Each object will have two attributes: a picture and the total grade in the class.</h3>
     
 <script>
+    var total = function (penguin)
+    {
+        penguin.final.grade * .35 + meanTests(penguin) * .3 +meanQuiz(penguin) * .2 + meanHW(penguin) *.15;
+    }
     var picandtotal = function (penguin)
     {
-        
-    }
+        var penguintotal = []
+        penguintotal.picture = penguin.picture;
+        penguintotal.totalgrade = total(penguin);
 
+    }
+    var answer=picandtotal;
     report("#B1",answer);
 </script>
     </div>
@@ -209,6 +216,14 @@ report("#A10",answer)
 <h3>Write a function to find the average grade of all students on the first quiz.</h3>
     <p>Here is what you should get.=6.217391304347826</p>
 <script>
+     var getGrade1 = function(quiz)
+    {
+        return quiz[0].grade;
+    }
+    var firstquizmean = function (quiz)
+    {
+       
+    }
 var answer="Please Complete";
 report("#C1",answer)    
 </script>
